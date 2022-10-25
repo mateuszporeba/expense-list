@@ -1,7 +1,7 @@
 import React from 'react';
 import './ExpenseItem.css';
 
-export default function ExpenseItem() {
+export default function ExpenseItem(props) {
 
     const expenseDate = new Date(2021, 9, 29);
     const expenseTitle = 'Car insurance';
@@ -9,11 +9,12 @@ export default function ExpenseItem() {
 
     return (
         <div className='expense-item'>
-            <div>{expenseDate.toISOString()}</div>
+            <div>{props.date.toISOString()}</div>
             <div className='expense-item__description'></div>
-            <div><h2>{expenseTitle}</h2></div>
-            <div className='expense-item__price'>${expenseAmount}</div>
+            <div>
+                <h2>{props.title}</h2>
+                </div>
+            <div className='expense-item__price'>${props.amount}</div>
         </div>
-        
     )
 }
