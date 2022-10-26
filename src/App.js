@@ -1,5 +1,5 @@
-import './App.css';
-import ExpenseItem from './components/ExpenseItem';
+//import './App.css';
+import Expenses from './components/Expenses';
 import uuid from "react-uuid";
 import { v4 } from 'uuid';
 
@@ -24,6 +24,12 @@ function App() {
       title: "Pencil",
       amount: 2.68,
       date: new Date(2021, 5, 29)
+    },
+    {
+      id: '4',
+      title: "backpack",
+      amount: 48.68,
+      date: new Date(2021, 6, 13)
     }
   ]
 
@@ -35,16 +41,10 @@ function App() {
       Get started
 
       <p>This is also visible</p>
-      <ExpenseItem
-        title={expenses[1].title}
-        amount={expenses[1].amount}
-        date={expenses[1].date}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expenses[2].title}
-        amount={expenses[2].amount}
-        date={expenses[2].date}
-      ></ExpenseItem>
+
+      <div>
+        <Expenses items={expenses}/>
+      </div>
     </div>
   );
 }

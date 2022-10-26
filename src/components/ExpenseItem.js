@@ -1,20 +1,19 @@
 import React from 'react';
 import './ExpenseItem.css';
+import ExpenseDate from './ExpenseDate';
+
+
 
 export default function ExpenseItem(props) {
 
-    const expenseDate = new Date(2021, 9, 29);
-    const expenseTitle = 'Car insurance';
-    const expenseAmount = 294.67;
 
     return (
         <div className='expense-item'>
-            <div>{props.date.toLocaleString('en-US', {month: 'long'})}</div>
-            <div className='expense-item__description'></div>
-            <div>
+            <ExpenseDate date={props.date} />
+            <div className='expense-item__description'>
                 <h2>{props.title}</h2>
-                </div>
-            <div className='expense-item__price'>${props.amount}</div>
+                <div className='expense-item__price'>{props.amount}</div>
+            </div>
         </div>
     )
 }
