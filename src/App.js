@@ -1,7 +1,9 @@
 //import './App.css';
-import Expenses from './components/Expenses';
+import Expenses from './components/Expenses/Expenses';
 import uuid from "react-uuid";
 import { v4 } from 'uuid';
+
+import NewExpense from './components/Expenses/NewExpense/NewExpense';
 
 
 function App() {
@@ -36,6 +38,8 @@ function App() {
   // use of UUID
   //<h1>{v4()}</h1>
 
+
+
   return (
     <div className="App">
       Get started
@@ -43,7 +47,8 @@ function App() {
       <p>This is also visible</p>
 
       <div>
-        <Expenses items={expenses}/>
+        <NewExpense />
+        <Expenses items={expenses} />
       </div>
     </div>
   );
