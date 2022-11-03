@@ -1,9 +1,8 @@
 //import './App.css';
 import Expenses from './components/Expenses/Expenses';
-import uuid from "react-uuid";
-import { v4 } from 'uuid';
-
 import NewExpense from './components/Expenses/NewExpense/NewExpense';
+
+
 
 
 function App() {
@@ -37,12 +36,11 @@ function App() {
 
 const addExpenseHandler = expense => {
 console.log('In App.js');
-console.log(expenses);
+console.log(expense);
 };
 
   // use of UUID
   //<h1>{v4()}</h1>
-
 
 
   return (
