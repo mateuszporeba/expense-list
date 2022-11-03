@@ -35,6 +35,11 @@ function App() {
     }
   ]
 
+const addExpenseHandler = expense => {
+console.log('In App.js');
+console.log(expenses);
+};
+
   // use of UUID
   //<h1>{v4()}</h1>
 
@@ -47,7 +52,7 @@ function App() {
       <p>This is also visible</p>
 
       <div>
-        <NewExpense />
+        <NewExpense onAddExpense={addExpenseHandler}/>
         <Expenses items={expenses} />
       </div>
     </div>

@@ -8,29 +8,12 @@ export default function ExpenseForm() {
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
 
-    // Other method of UseState
-    // const [userInput, setUserInput] = useState({
-    //     enteredTitle: '',
-    //     enteredAmount: '',
-    //     enteredDate: ''
-    // })
-
     const titleChangeHandler = (event) => {
         setEnteredTitle(event.target.value);
     };
 
     const amountChangeHandler = (event) => {
         setEnteredAmount(event.target.value);
-
-        // setUserInput({
-        //     ...userInput,
-        //     enteredAmount: event.target.value,
-        // });
-
-        // setUserInput((prevState) => {
-        //     return { ...prevState, enteredTitle: event.target.value }
-        // });
-        //console.log(event.target.value);
     };
 
     const dateChangeHandler = (event) => {
@@ -73,3 +56,24 @@ export default function ExpenseForm() {
         </form>
     )
 }
+
+
+
+
+    // Other method of UseState
+    // const [userInput, setUserInput] = useState({
+    //     enteredTitle: '',
+    //     enteredAmount: '',
+    //     enteredDate: ''
+    // })
+
+
+            // setUserInput({
+        //     ...userInput,
+        //     enteredAmount: event.target.value,
+        // });
+
+        // setUserInput((prevState) => {
+        //     return { ...prevState, enteredTitle: event.target.value }
+        // });
+        //console.log(event.target.value);
