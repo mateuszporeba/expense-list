@@ -6,10 +6,13 @@ import ExpensesFilter from './ExpensesFilter'
 
 export default function Expenses(props) {
 
+    const saveFilterData = () => {
+
+    };
 
     return (
         <div>
-            <ExpensesFilter onFilterChange={}/>
+            <ExpensesFilter onFilterChange={saveFilterData}/>
             <Card className='expenses'>
                 <ExpenseItem
                     title={props.items[0].title}
