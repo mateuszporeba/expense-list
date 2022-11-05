@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-
 import './ExpenseForm.css'
 
 export default function ExpenseForm(props) {
@@ -17,6 +16,7 @@ export default function ExpenseForm(props) {
     };
 
     const dateChangeHandler = (event) => {
+        console.log(event.target.value);
         setEnteredDate(event.target.value);
     };
 

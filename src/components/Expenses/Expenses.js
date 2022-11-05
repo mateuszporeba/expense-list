@@ -3,6 +3,7 @@ import ExpenseItem from './ExpenseItem'
 import './Expenses.css'
 import Card from '../UI/Card'
 import ExpensesFilter from './ExpensesFilter'
+import { v4 } from 'uuid'
 
 export default function Expenses(props) {
 
@@ -18,7 +19,7 @@ export default function Expenses(props) {
             <Card className='expenses'>
                 <ExpensesFilter selected={filteredYear} onFilterChange={filterChangeHandler} />
 
-                {props.items.map(expense => <ExpenseItem title={expense.title} amount={expense.amount} date={expense.date} />)}
+                {props.items.map(expense => <ExpenseItem title={expense.title} amount={expense.amount} date={expense.date} key={v4().toString()}/>)}
 
 
                 <ExpenseItem
