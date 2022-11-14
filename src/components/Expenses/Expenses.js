@@ -10,7 +10,6 @@ export default function Expenses(props) {
     const [filteredYear, setFilteredYear] = useState('2020');
 
     const filterChangeHandler = (selectedYear) => {
-        console.log('expenses.js');
         console.log(selectedYear)
     };
 

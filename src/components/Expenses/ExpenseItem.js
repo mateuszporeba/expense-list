@@ -12,7 +12,6 @@ const [title, setTitle] = useState(props.title);
     const onClickHandler = () => {
         console.log('changed value: ' + title);
         setTitle('Updated!');
-        console.log("Kliknięte!");
     };
 
     return (

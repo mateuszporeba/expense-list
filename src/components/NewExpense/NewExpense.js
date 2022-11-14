@@ -12,9 +12,9 @@ const saveExpenseDataHandler = (enteredExpenseData) => {
         //id: Math.random().toString()
     };
     //console.log(expenseData.id);
-    console.log('NewExpense expense Data: ' + expenseData.date);
-    console.log('NewExpense expense Data: ' + expenseData.title);
-    console.log('NewExpense expense Data: ' + expenseData[1]);
+    // console.log('NewExpense expense Data: ' + expenseData.date);
+    // console.log('NewExpense expense Data: ' + expenseData.title);
+    // console.log('NewExpense expense Data: ' + expenseData[1]);
     props.onAddExpense(expenseData);
 };
 
