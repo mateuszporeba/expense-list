@@ -23,7 +23,7 @@ export default function NewExpense(props) {
 
     const stopEditingHandler = () => {
         setIsEditing(false);
-    }
+    };
 
     return (
         <div className='new-expense'>
